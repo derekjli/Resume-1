@@ -43,14 +43,16 @@
 
 %-------------------------
 % Custom commands
+
 \newcommand{\resumeItem}[2]{
-  \item\small{
+  \item[]\small{
     \textbf{#1}{: #2 \vspace{-2pt}}
   }
 }
 
+
 \newcommand{\resumeItemWithoutTitle}[1]{
-  \item\small{
+  \item[]\small{
     {\vspace{-2pt}}
   }
 }
@@ -68,7 +70,9 @@
 
 \renewcommand{\labelitemii}{$\circ$}
 
-\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListStart}{
+    \begin{itemize} \setlength{\itemindent}{-2.5em}
+}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
 \newcommand{\resumeItemListStart}{\begin{itemize}}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
@@ -80,7 +84,7 @@
 
 %----------HEADING-----------------
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-  \textbf{{\LARGE Anubhav Singh}} & Email: \href{mailto:xprilion@gmail.com}{xprilion@gmail.com}\\
+  \textbf{{\LARGE Derek J Lin}} & Email: \href{mailto:xprilion@gmail.com}{xprilion@gmail.com}\\
   \href{https://xprilion.com}{Portfolio: xprilion.com} & Mobile:~~~+91-700-3944-046 \\
   \href{https://github.com/xprilion}{Github: ~~github.com/xprilion} \\
 \end{tabular*}
@@ -89,9 +93,14 @@
 \section{Education}
   \resumeSubHeadingListStart
     \resumeSubheading
+      {University of Southern California}{Los Angeles, CA}
+      {B.S. in Computer Science}{Grad. Dec 2021}
+     
+      \resumeSubheading
       {Netaji Subhash Engineering College}{Kolkata, India}
       {Bachelor of Technology - Information Technology;  GPA: 7.27}{July 2016 - June 2020}
       {\scriptsize \textit{ \footnotesize{\newline{}\textbf{Courses:} Operating Systems, Data Structures, Analysis Of Algorithms, Artificial Intelligence, Machine Learning, Networking, Databases}}}
+      
     \resumeSubHeadingListEnd
 	    
 \vspace{-5pt}
@@ -109,13 +118,12 @@
   \resumeSubHeadingListStart
     \resumeSubheading{Google Summer of Code - Submitty}{Remote}
     {Student Developer (Full-time)}{May 2019 - Sep 2019}
-    \resumeItemListStart
-        \resumeItem{Discussion Forum Upgrades}
+    \begin{description}[font=$\bullet$]
+        \item[] {Discussion Forum Upgrades}
           {Refactor forum for performance to handle large databases.}
           \resumeItem{REST API for Discussion Forum}
           {Symphony \& Twig based Forum parts converted to API-first interface.}
           \resumeItem{Ratchet PHP WebSocket}{Implemented a WebSocket for low-latency real time exchange of posts and thread updates.}
-      \resumeItemListEnd
 \vspace{-5pt}
     \resumeSubheading
 		{DataCamp Inc.}{Remote}
@@ -156,11 +164,11 @@ faster. Tech: Python, Alibaba Cloud, Raspberry Pi, Arduino, SUMO \& OpenCV. (Aug
 %-----------Awards-----------------
 \section{Honors and Awards}
 \begin{description}[font=$\bullet$]
-\item {Awarded title of Intel Software Innovator - May, 2019}
+\item[] {Awarded title of Intel Software Innovator - May, 2019}
 \vspace{-5pt}
-\item {Second Runner's Up at TCS EngiNx Engineering Project Innovation Content - September, 2018 }
+\item[] {Second Runner's Up at TCS EngiNx Engineering Project Innovation Content - September, 2018 }
 \vspace{-5pt}
-\item {Runner's Up at Facebook Developers Circle Hackathon - August, 2017}
+\item[] {Runner's Up at Facebook Developers Circle Hackathon - August, 2017}
 
 \end{description}
 
