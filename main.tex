@@ -1,11 +1,8 @@
-%------------------------
-% Resume Template
-% Author : Anubhav Singh
-% Github : https://github.com/xprilion
-% License : MIT
+%-------------------------
+% Resume in Latex
 %------------------------
 
-\documentclass[a4paper,20pt]{article}
+\documentclass[letterpaper,11pt]{article}
 
 \usepackage{latexsym}
 \usepackage[empty]{fullpage}
@@ -24,13 +21,13 @@
 \renewcommand{\footrulewidth}{0pt}
 
 % Adjust margins
-\addtolength{\oddsidemargin}{-0.530in}
+\addtolength{\oddsidemargin}{-0.375in}
 \addtolength{\evensidemargin}{-0.375in}
 \addtolength{\textwidth}{1in}
-\addtolength{\topmargin}{-.45in}
-\addtolength{\textheight}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
 
-\urlstyle{rm}
+\urlstyle{same}
 
 \raggedbottom
 \raggedright
@@ -38,152 +35,183 @@
 
 % Sections formatting
 \titleformat{\section}{
-  \vspace{-10pt}\scshape\raggedright\large
-}{}{0em}{}[\color{black}\titlerule \vspace{-6pt}]
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
 
 %-------------------------
 % Custom commands
-
 \newcommand{\resumeItem}[2]{
-  \item[]\small{
-    \textbf{#1}{: #2 \vspace{-2pt}}
+  \item\small{
+    \textbf{#1}{#2 \vspace{-0pt}}
   }
 }
 
-
-\newcommand{\resumeItemWithoutTitle}[1]{
-  \item[]\small{
-    {\vspace{-2pt}}
-  }
+\newcommand{\derpItem}[2] {
+    \item\small{
+        \textbf{#1}{#2 \vspace{-4pt}}
+    }
 }
 
-\newcommand{\resumeSubheading}[4]{
-  \vspace{-1pt}\item[]
+\newcommand{\resumeSubheading}[5]{
+  \vspace{-1pt}\item
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & #2 \\
-      \textit{#3} & \textit{#4} \\
-    \end{tabular*}\vspace{-5pt}
+      \textbf{#1} \textit{#3} & #2 \\
+      \textit{\small#4} & \textit{\small #5} \\
+    \end{tabular*}\vspace{-4pt}   %%change this to decrease distance between subheading items
 }
 
+\newcommand{\resumeProjheading}[3]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} \textit{#3} & \textit{#2}\\
+    \end{tabular*}\vspace{-4pt}
+}
 
-\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-3pt}}
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
 
 \renewcommand{\labelitemii}{$\circ$}
 
-\newcommand{\resumeSubHeadingListStart}{
-    \begin{itemize} \setlength{\itemindent}{-2.5em}
-}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\skillListStart}{\begin{itemize}}
+\newcommand{\skillListEnd}{\end{itemize}\vspace{-5pt}}
+\newcommand{\resumeItemListStart}{\begin{itemize}} %you can add this here: [topsep=3pt]
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 
-%-----------------------------
-%%%%%%  CV STARTS HERE  %%%%%%
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 
 \begin{document}
 
 %----------HEADING-----------------
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-  \textbf{{\LARGE Derek J Lin}} & Email: \href{mailto:xprilion@gmail.com}{xprilion@gmail.com}\\
-  \href{https://xprilion.com}{Portfolio: xprilion.com} & Mobile:~~~+91-700-3944-046 \\
-  \href{https://github.com/xprilion}{Github: ~~github.com/xprilion} \\
+  \textbf{\href{https://google.com}{\Huge Derek J. Lin}} & Email : \href{mailto:derekjli@usc.edu}{derekjli@usc.edu}\\ linkedin:
+  \href{https://www.linkedin.com/in/derek-lin-823b7510a/?trk=pub-pbmap}{derek-lin-823b7510a} github: \href{https://github.com/djl132}{djl132} \href{https://github.com/derekjli}{derekjli} & Mobile : +1-408-300-4368 \\
 \end{tabular*}
+
 
 %-----------EDUCATION-----------------
 \section{Education}
   \resumeSubHeadingListStart
     \resumeSubheading
-      {University of Southern California}{Los Angeles, CA}
+      {University of Southern California}{Los Angeles, CA}{}
       {B.S. in Computer Science}{Grad. Dec 2021}
-     
-      \resumeSubheading
-      {Netaji Subhash Engineering College}{Kolkata, India}
-      {Bachelor of Technology - Information Technology;  GPA: 7.27}{July 2016 - June 2020}
-      {\scriptsize \textit{ \footnotesize{\newline{}\textbf{Courses:} Operating Systems, Data Structures, Analysis Of Algorithms, Artificial Intelligence, Machine Learning, Networking, Databases}}}
-      
-    \resumeSubHeadingListEnd
-	    
-\vspace{-5pt}
-\section{Skills Summary}
-	\resumeSubHeadingListStart
-	\resumeSubItem{Languages}{~~~~~~Python, PHP, C++, JavaScript, SQL, Bash, JAVA}
-	\resumeSubItem{Frameworks}{~~~~Scikit, NLTK, SpaCy, TensorFlow, Keras, Django, Flask, NodeJS, LAMP}
-	\resumeSubItem{Tools}{~~~~~~~~~~~~~~Kubernetes, Docker, GIT, PostgreSQL, MySQL, SQLite}
-	\resumeSubItem{Platforms}{~~~~~~~Linux, Web, Windows, Arduino, Raspberry, AWS, GCP, Alibaba Cloud, IBM Cloud}
-	\resumeSubItem{Soft Skills}{~~~~~~~Leadership, Event Management, Writing, Public Speaking, Time Management}
+    \resumeSubheading
+      {Case Western Reserve University}{Cleveland, OH}{}
+      {B.S. in Biomedical Engineering to B.S. in Computer Science}{Trans. Aug 2018}
 
-\resumeSubHeadingListEnd
-\vspace{-5pt}
+\vspace{0.2 cm}
+{\addtolength{\leftskip}{0.2cm}\textbf{Experience with:} Full Stack Web Development, iOS App Development, Databases, Computer Systems\par}
+
+  \resumeSubHeadingListEnd
+
+%-----------EXPERIENCE-----------------
 \section{Experience}
   \resumeSubHeadingListStart
-    \resumeSubheading{Google Summer of Code - Submitty}{Remote}
-    {Student Developer (Full-time)}{May 2019 - Sep 2019}
-    \begin{description}[font=$\bullet$]
-        \item[] {Discussion Forum Upgrades}
-          {Refactor forum for performance to handle large databases.}
-          \resumeItem{REST API for Discussion Forum}
-          {Symphony \& Twig based Forum parts converted to API-first interface.}
-          \resumeItem{Ratchet PHP WebSocket}{Implemented a WebSocket for low-latency real time exchange of posts and thread updates.}
-\vspace{-5pt}
+  
+  \resumeSubheading
+     {Raytheon Technologies}{Los Angeles, CA}{}
+     {Senior Capstone | Binwalk, Ghidra, Port Scanning, Burpsuite }{Aug 2021 - Dec 2021}
+     \resumeItemListStart
+     \resumeItem{}
+	{Assessed the vulnerabilities of a Blurams camera device}
+	\resumeItem{}
+	{Extracted and analyzed files from device firmware update package using binwalk and bash scripts}
+    \resumeItem{}
+	{Employed Ghidra to reverse-engineer device application APK file}
+     \resumeItemListEnd
+      
     \resumeSubheading
-		{DataCamp Inc.}{Remote}
-		{Instructor (Part-time, Contractual)}{Dec 2018 -  Present}
-		\resumeItemListStart
-        \resumeItem{Project Course - Find Movie Similarity from Plot Summaries}
-          {Created project based course using Unsupervised learning and natural language processing.}
-        \resumeItem{Tutorial - Introduction to Reinforcement Learning}
-          {Created tutorial for Q-learning RL algorithm and  concepts.}
-        \resumeItem{Impact}{Course has been taken by 250+ students so far with 4.65 average rating.}
-		\resumeItemListEnd
+     {Spark Visions Inc.}{Los Angeles, CA}{}
+     {Founder | Ruby on Rails, Gems, Postgres, AngularJS, HTML/SCSS/JS, WebSockets }{Aug 2021 - Dec 2021}
+     \resumeItemListStart
+     \resumeItem{}
+	{Created a social platform that helps students discuss class material together and connect with each other}
+	\resumeItem{}
+	{Employed SQL to develop algorithms for ranking questions and answers as well as determining social and scholar reputation of each user through a peer review system}
+	\resumeItem{}
+	{Developed real-time push notifications using WebSocket Protocol, Rails ActionCable, and server-side Redis}
+	\resumeItem{}
+	{Built Frontend for 6 prototypes using Bootstrap, HTML/SCSS/JS, and Sketch}
+      \resumeItemListEnd
 
-\resumeSubHeadingListEnd
+   \resumeSubheading
+     {Bloc.io}{San Francisco, CA}{}
+     {Full Stack Web Development Student}{Dec 2016 - Aug 2017}
+    \resumeItemListStart
+	\resumeItem{}
+	{Created 7 personal projects including those below and a capstone while learning full stack development}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
 
-%-----------PROJECTS-----------------
-\vspace{-5pt}
-\section{Projects}
-\resumeSubHeadingListStart
-\resumeSubItem{Vison - multimedia search engine (NLP, Search Engine, Web Crawlers, Multimedia Processing)}{(Work in progress) Research oriented, open source, search engine for bringing reverse multimedia search to small \& mid scale enterprises. Tech: Python, NodeJS, Intel OpenVino Toolkit, Selenium, TensorFlow (October '18)}
-\vspace{2pt}
-\resumeSubItem{Reinforcement Learning based Traffic Control System (Reinforcement Learning, Computer Vision)}{AI model to resolve city traffic around 50\%
-faster. Tech: Python, Alibaba Cloud, Raspberry Pi, Arduino, SUMO \& OpenCV. (August '18)}
-\vspace{2pt}
-\resumeSubItem{Panorama from Satellite Imagery using Distributed Computing (Distributed Computing, Image Processing)}{Images clicked using drones, provided by ISRO were stitched together using distributed public compute nodes, effectively bringing down processing time exponentially. Tech: PHP, C++, Java, Python (March '18)}
-\vspace{2pt}
-\resumeSubItem{Drag-n-drop machine learning learning environment (Web Development, Machine Learning)}{Scratch like tool for implementing machine learning pipelines along with built in tutorial for each concept. Tech: Python, JavaScript (September '18)}
-\vspace{2pt}
-\resumeSubItem{Search Engine and Social Network(Web Development, Web Crawler, Search)}{Created from scratch a social network and a search engine based on the idea of integrating Facebook and Google. The launched website was among top 1000 websites in India during 2012-2013. Tech: PHP, MySQL, HTML, CSS, WebSockets, JavaScript, RSS, XML ( May '12)}
-\resumeSubHeadingListEnd
-\vspace{-5pt}
-\section{Publications}
-\resumeSubHeadingListStart
-\resumeSubItem{Book: Deep Learning on Web (Web Development, Deep Learning)}{Work in Progress book to be published by Packt Publishing in late 2019. Tech: Django, Python, AWS, GCP, Azure (November '18)}
-\vspace{2pt}
-\resumeSubItem{Book: Deep Learning on Mobile Devices (Flutter App Development, Deep Learning)}{Work in Progress book to be published by Packt Publishing in late 2019. Tech: Flutter, Android, Firebase, TensorFlow, Python, Dart (December '18)}
-\resumeSubHeadingListEnd
-\vspace{-5pt}
-%-----------Awards-----------------
-\section{Honors and Awards}
-\begin{description}[font=$\bullet$]
-\item[] {Awarded title of Intel Software Innovator - May, 2019}
-\vspace{-5pt}
-\item[] {Second Runner's Up at TCS EngiNx Engineering Project Innovation Content - September, 2018 }
-\vspace{-5pt}
-\item[] {Runner's Up at Facebook Developers Circle Hackathon - August, 2017}
-
-\end{description}
-
-\vspace{-5pt}
-\section{Volunteer Experience}
+%-----------Personal PROJECTS-----------------
+\section{Personal Projects}
   \resumeSubHeadingListStart
-	\resumeSubheading
-    {Community Lead at Developer Student Clubs NSEC}{Kolkata, India}
-    {Conducted online and offline technical \& soft-skills training impacting over 3000 students.}{Jan 2019 - Present}
-\vspace{5pt}
-    % \vspace{10pt}\textbf{\large{Community Experience}}
-    \resumeSubheading
-    {Event Organizer at Google Developers Group Kolkata}{Kolkata, India}
-    {Organized events, conducted workshops and delivered workshops reaching over 7000 developers.}{Jan 2018 - Present}
-
+    \resumeProjheading
+      {Kele API}{}{| Ruby, Gems, HTTParty, Curl}
+      \resumeItemListStart
+	\resumeItem {}
+	{Designed Ruby gem that enables Bloc.io to perform transactions including sending messages and creating posts}
+      \resumeItemListEnd
+      
+	\resumeProjheading
+      {Reddit.io}{}{| Ruby on Rails, MailGun API, JQuery, SQLite}
+      \resumeItemListStart
+	\resumeItem{}
+	{Developed a Reddit-like app using Rails Views and JS for Frontend UI, and Ruby/Rails gems for Backend}
+      \resumeItemListEnd
+%     	\resumeProjheading
+%       {Omnifood}{}{| HTML/CSS, JQuery}
+%       \resumeItemListStart
+% 	\resumeItem{}
+% 	{Developed a mock website advertising a theoretical food-delivery app}
+%       \resumeItemListEnd
+      	\resumeProjheading
+      {AngularFire Slack}{}{| AngularJS, HTML/CSS, JS, Firebase}
+      \resumeItemListStart
+	\resumeItem{}
+	{Created Slack chat replica using AngularJS services for cookies and Firebase for data persistence}
+      \resumeItemListEnd
+      	\resumeProjheading
+      {AngularJams}{}{| AngularJS, JQuery, Bootstrap}
+      \resumeItemListStart
+	\resumeItem{}
+	{Built a music player with AngularJS  and JQuery}
+    \resumeItem{}
+	{Implemented JS Music API to convert sound files into browser-friendly format}
+     \resumeItemListEnd
+     \resumeProjheading
+      {Georeminder}{}{| Swift, XCode, Firebase}
+      \resumeItemListStart
+      	\resumeItem {}
+	{Developed app that reminds you of things you need to do based on your location}
+      \resumeItemListEnd
 \resumeSubHeadingListEnd
 
+\section{Team Projects}
+  \resumeSubHeadingListStart
+  \resumeProjheading
+      {Recipez}{}{| Java, Spring, MySQL, BootStrap, SMTP}
+      \resumeItemListStart
+	\resumeItem {}
+	{Developed a recipe search engine that notifies user of other users' actions}
+      \resumeItemListEnd
+  
+\resumeSubHeadingListEnd
+
+%--------PROGRAMMING SKILLS------------
+\section{Skills}
+  \skillListStart
+        \derpItem{Languages: }{Java, Javascript, Swift, Ruby on Rails, SQL, Postgres, C/C++, Sketch, Figma }
+	\derpItem{Platforms/Libraries: }{AngularJS, Spring, XCode, Docker}
+  \skillListEnd
+  
+% %--------AWARDS------------
+% \section{Awards}
+%   \skillListStart
+%         \derpItem{American Invitational Mathematics Examination (AIME)}{ - extra info}
+%   \skillListEnd
+
+%-------------------------------------------
 \end{document}
